@@ -279,6 +279,10 @@ public:
 	 */
 	virtual string getNameParams(bool show_fixed_params = false);
 
+    // resale each total_num_subst according to the
+    // total_num_subst of the whole mixture model (not individually)
+    void rescale_whole_mix();
+    
     /**
      * compute the memory size for the model, can be large for site-specific models
      * @return memory size required in bytes
