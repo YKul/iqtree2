@@ -1,0 +1,43 @@
+/snap/clion/291/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -S /home/chordata/Documents/GitHub/iqtree2 -B /home/chordata/Documents/GitHub/iqtree2/cmake-build-debug
+CMake Deprecation Warning at CMakeLists.txt:63 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+IQ-TREE flags : 
+Build lib    : OFF
+Integrate CMAPLE: OFF
+Target OS     : Unix
+Compiler      : GNU Compiler (gcc)
+Compiler version: 11.4.0
+Target binary : 64-bit
+OpenMP        : Yes
+MPI           : NONE
+Vectorization : SSE3/AVX/AVX2
+C flags       :  -pthread  -g
+CXX flags     :  -std=c++17 -fopenmp -pthread  -g
+LINKER flags  :  -rdynamic  -Wl,--gc-sections
+Using system zlib
+CMake Deprecation Warning at yaml-cpp/CMakeLists.txt:5 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at terraphast/CMakeLists.txt:3 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- clang-tidy not found.
+-- Configuring done (0.3s)
+-- Generating done (0.3s)
+-- Build files have been written to: /home/chordata/Documents/GitHub/iqtree2/cmake-build-debug

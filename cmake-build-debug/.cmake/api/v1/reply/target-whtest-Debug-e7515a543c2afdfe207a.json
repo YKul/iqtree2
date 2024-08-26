@@ -1,0 +1,280 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "whtest/libwhtest.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"whtest/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 121,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 122,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 123,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 689,
+				"parent" : 2
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -pthread  -O0 -g -fno-inline-functions -fno-inline-functions-called-once -fno-default-inline -fno-inline -fdiagnostics-color=always   -I/usr/include/eigen3 -I/usr/include"
+				},
+				{
+					"fragment" : "-D__SSE3 -msse3"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "IQTREE_TERRAPHAST"
+				},
+				{
+					"define" : "IQ_TREE"
+				},
+				{
+					"define" : "USE_BOOST"
+				},
+				{
+					"define" : "USE_BOOSTER"
+				},
+				{
+					"define" : "USE_LSD2"
+				},
+				{
+					"define" : "_USE_PTHREADS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/yaml-cpp/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/after"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/system"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/cmake-build-debug"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -std=c++17 -fopenmp -pthread  -O0 -g -fno-inline-functions -fno-inline-functions-called-once -fno-default-inline -fno-inline -fdiagnostics-color=always   -I/usr/include/eigen3 -I/usr/include"
+				},
+				{
+					"fragment" : "-D__SSE3 -msse3"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "IQTREE_TERRAPHAST"
+				},
+				{
+					"define" : "IQ_TREE"
+				},
+				{
+					"define" : "USE_BOOST"
+				},
+				{
+					"define" : "USE_BOOSTER"
+				},
+				{
+					"define" : "USE_LSD2"
+				},
+				{
+					"define" : "_USE_PTHREADS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/yaml-cpp/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/after"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/system"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/cmake-build-debug"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				7
+			]
+		}
+	],
+	"id" : "whtest::@0a779f3c799179801044",
+	"name" : "whtest",
+	"nameOnDisk" : "libwhtest.a",
+	"paths" : 
+	{
+		"build" : "whtest",
+		"source" : "whtest"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				8
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "whtest/eigen.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "whtest/eigen_sym.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "whtest/random.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "whtest/weisslambda.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "whtest/weisslambda_sub.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "whtest/whtest.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "whtest/whtest_sub.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "whtest/whtest_wrapper.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "whtest/whtest_wrapper.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

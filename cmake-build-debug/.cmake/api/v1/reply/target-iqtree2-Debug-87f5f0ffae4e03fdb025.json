@@ -1,0 +1,647 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "iqtree2"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"install",
+			"link_directories",
+			"target_link_libraries",
+			"add_definitions",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"terracetphast/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 786,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 992,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 448,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 808,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 887,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 896,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 903,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 910,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 928,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 6,
+				"parent" : 10
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 132,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 69,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 84,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 720,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 146,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 430,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 122,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 123,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 689,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -std=c++17 -fopenmp -pthread  -O0 -g -fno-inline-functions -fno-inline-functions-called-once -fno-default-inline -fno-inline -fdiagnostics-color=always   -I/usr/include/eigen3 -I/usr/include"
+				},
+				{
+					"fragment" : "-D__SSE3 -msse3"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 12,
+					"define" : "IQTREE_TERRAPHAST"
+				},
+				{
+					"backtrace" : 13,
+					"define" : "IQ_TREE"
+				},
+				{
+					"backtrace" : 14,
+					"define" : "USE_BOOST"
+				},
+				{
+					"backtrace" : 15,
+					"define" : "USE_BOOSTER"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "USE_LSD2"
+				},
+				{
+					"backtrace" : 17,
+					"define" : "_USE_PTHREADS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 18,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2"
+				},
+				{
+					"backtrace" : 19,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/yaml-cpp/include"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/after"
+				},
+				{
+					"backtrace" : 20,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/system"
+				},
+				{
+					"backtrace" : 21,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/cmake-build-debug"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/terraphast/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/terraphast/lib/gcc_clang"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 8,
+			"id" : "kernelsse::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "kernelavx::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "kernelfma::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "booster::@cf84e3984451ff62d4b6"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "pllavx::@4b9922b0f2b63c8f6514"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pll::@4b9922b0f2b63c8f6514"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "ncl::@7cb6e39d9e63f0f58208"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "nclextra::@95c23c752c6c3ad74218"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "utils::@c810615cce0f7acb82dc"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "pda::@6aa9e663d1c30b62433c"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "lbfgsb::@fd5eb019b1f36022386e"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "whtest::@0a779f3c799179801044"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "sprng::@89ab31f0a79b1f0812e6"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "vectorclass::@c62c6dbf4e2c32612c45"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "model::@6e2dbee8102cccb9a4b2"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "gsl::@ff94c3039c513da1e90d"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "alignment::@eb3122177d5ef953f47a"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "tree::@08328a494b2f609a5757"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "terrace::@8e533c5da3b1d46d6e60"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "main::@15c4a824ab2728a3f5e7"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "yaml-cpp::@087a93a4958cf3ca073e"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "phyloYAML::@1d0f37058b85f62f10d4"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "terraphast::@553962fc7753a576d3e8"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "terracetphast::@d5c74ab279f722c42902"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "lsd2::@de7d9a2049f3d9488416"
+		}
+	],
+	"id" : "iqtree2::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-std=c++17 -fopenmp -pthread  -O0 -g -fno-inline-functions -fno-inline-functions-called-once -fno-default-inline -fno-inline",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic   -rdynamic",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-L/home/chordata/Documents/GitHub/iqtree2/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/chordata/Documents/GitHub/iqtree2/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "booster/libbooster.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "pll/libpll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "ncl/libncl.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "nclextra/libnclextra.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "utils/libutils.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "pda/libpda.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "lbfgsb/liblbfgsb.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "whtest/libwhtest.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "sprng/libsprng.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "vectorclass/libvectorclass.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "model/libmodel.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "gsl/libgsl.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "alignment/libalignment.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "tree/libtree.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "simulator/libsimulator.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "terrace/libterrace.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "yaml-cpp/libyaml-cpp.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "phylo-yaml/libphyloYAML.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "main/libmain.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "terracetphast/libterracetphast.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "lsd2/liblsd2.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "libkernelsse.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "pll/libpllavx.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "libkernelavx.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "libkernelfma.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "yaml-cpp/libyaml-cpp.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "booster/libbooster.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "pda/libpda.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "nclextra/libnclextra.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "whtest/libwhtest.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "vectorclass/libvectorclass.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "terrace/libterrace.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "tree/libtree.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "pll/libpll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "alignment/libalignment.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "simulator/libsimulator.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "alignment/libalignment.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "simulator/libsimulator.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "ncl/libncl.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "model/libmodel.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "utils/libutils.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "lbfgsb/liblbfgsb.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "sprng/libsprng.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lz",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "gsl/libgsl.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "terraphast/libterraphast.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "iqtree2",
+	"nameOnDisk" : "iqtree2",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "obsolete/parsmultistate.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "obsolete/parsmultistate.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "EXECUTABLE"
+}
