@@ -332,6 +332,20 @@ StateFreqType ModelCodon::initCodon(const char *model_name, StateFreqType freq, 
         return initMG94(false, freq, CK_TWO_KAPPA, freq_params);
 	} else if (name_upper == "GY") {
         return initGY94(false, CK_ONE_KAPPA);
+	/*
+	 * ---------------------------------------------------------------
+	 * Below are temporary in order to test M3 with fixed omega/kappa
+	 * ---------------------------------------------------------------
+	 */
+	} else if (name_upper == "GYTESTCAT1") {
+		return initGY94(true, CK_ONE_KAPPA, 0.54066);//0.03528);
+	} else if (name_upper == "GYTESTCAT2") {
+		return initGY94(true, CK_ONE_KAPPA, 0.60319);
+	} else if (name_upper == "GYTESTCAT3") {
+		return initGY94(true, CK_ONE_KAPPA, 1.81189);
+	/*
+	 * ---------------------------------------------------------------
+	 */
 	} else if (name_upper == "GY0K" || name_upper == "GYKAP1") {
         return initGY94(true, CK_ONE_KAPPA);
 	} else if (name_upper == "GY1KTS" || name_upper == "GYKAP2") {
@@ -340,6 +354,16 @@ StateFreqType ModelCodon::initCodon(const char *model_name, StateFreqType freq, 
         return initGY94(false, CK_ONE_KAPPA_TV);
 	} else if (name_upper == "GY2K" || name_upper == "GYKAP4") {
         return initGY94(false, CK_TWO_KAPPA);
+    /*Yuri
+     * Used to fix omega to 1 or 0
+     */
+    } else if (name_upper == "GYPURSEL") {
+        return initGY94(false, CK_ONE_KAPPA);
+    } else if (name_upper == "GYPOSSEL") {
+        return initGY94(false, CK_ONE_KAPPA);
+	/*
+	 * -----------------------------
+	 */
 	} else if (name_upper == "ECM" || name_upper == "KOSI07" || name_upper == "ECMK07") {
 		if (!phylo_tree->aln->isStandardGeneticCode())
 			outError("For ECMK07 a standard genetic code must be used");
@@ -547,7 +571,7 @@ StateFreqType ModelCodon::initMG94(bool fix_kappa, StateFreqType freq, CodonKapp
 }
 
 StateFreqType ModelCodon::initGY94(bool fix_kappa, CodonKappaStyle kappa_style) {
-    fix_omega = false;
+	fix_omega = false;
     this->fix_kappa = fix_kappa;
     if (fix_kappa)
         kappa = 1.0;
@@ -559,7 +583,28 @@ StateFreqType ModelCodon::initGY94(bool fix_kappa, CodonKappaStyle kappa_style) 
             
     return FREQ_EMPIRICAL;
 }
+/*
+ * ---------------------------------------
+ * Below is used to fix omega for M3 test
+ * ---------------------------------------
+ */
+StateFreqType ModelCodon::initGY94(bool fix_kappa, CodonKappaStyle kappa_style, double omega) {
+    fix_omega = true;
+    this->omega = omega;
+    this->fix_kappa = fix_kappa;
+    if (fix_kappa)
+        kappa = 4.89033; //Same value from codeml.ctl
+    fix_kappa2 = true;
+    codon_freq_style = CF_TARGET_CODON;
+    this->codon_kappa_style = kappa_style;
+    if (kappa_style == CK_TWO_KAPPA)
+        fix_kappa2 = false;
 
+    return FREQ_EMPIRICAL;
+}
+/*
+ * ---------------------------------------
+ */
 
 void ModelCodon::computeRateAttributes() {
     char symbols_protein[] = "ARNDCQEGHILKMFPSTWYVX"; // X for unknown AA
@@ -1071,12 +1116,19 @@ void ModelCodon::setVariables(double *variables) {
 void ModelCodon::setBounds(double *lower_bound, double *upper_bound, bool *bound_check) {
 	int i, ndim = getNDim();
 
+
 	for (i = 1; i <= ndim; i++) {
 		//cout << variables[i] << endl;
 		lower_bound[i] = MIN_OMEGA_KAPPA;
 		upper_bound[i] = MAX_OMEGA_KAPPA;
 		bound_check[i] = false;
 	}
+    //Yuri
+    if (name == "GYPURSEL"){
+        upper_bound[1] = 0.999;
+    } else if (name == "GYPOSSEL"){
+        lower_bound[1] = 1.001;
+    }
 
 	if (freq_type == FREQ_ESTIMATE) {
 		for (i = ndim-num_states+2; i <= ndim; i++) {

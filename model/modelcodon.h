@@ -194,7 +194,14 @@ protected:
         @return default frequency type
     */
 	StateFreqType initGY94(bool fix_kappa, CodonKappaStyle kappa_style);
-
+//Yuri
+    /** initialize Goldman-Yang 1994 model (simplified version with fixed omega and a kappa
+    @param fix_kappa whether or not to fix kappa
+    @param kappa_style: CK_ONE_KAPPA for traditional GY model, others follow Kosiol et al 2007
+    @param fix_omega whether or not to fix omega for models with selection assumption (M1a, M2a)
+    @return default frequency type
+*/
+    StateFreqType initGY94(bool fix_kappa, CodonKappaStyle kappa_style, double omega);
 	/**
 		this function is served for the multi-dimension optimization. It should pack the model parameters
 		into a vector that is index from 1 (NOTE: not from 0)

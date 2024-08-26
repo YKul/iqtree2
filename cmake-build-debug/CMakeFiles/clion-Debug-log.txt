@@ -1,0 +1,75 @@
+/snap/clion/291/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/291/bin/ninja/linux/x64/ninja -G Ninja -S /home/chordata/Documents/GitHub/iqtree2 -B /home/chordata/Documents/GitHub/iqtree2/cmake-build-debug
+CMake Deprecation Warning at CMakeLists.txt:63 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0")
+IQ-TREE flags : 
+Build lib    : OFF
+Integrate CMAPLE: OFF
+Target OS     : Unix
+Compiler      : GNU Compiler (gcc)
+Compiler version: 11.4.0
+Target binary : 64-bit
+OpenMP        : Yes
+MPI           : NONE
+Vectorization : SSE3/AVX/AVX2
+C flags       :  -pthread  -g
+CXX flags     :  -std=c++17 -fopenmp -pthread  -g
+LINKER flags  :  -rdynamic  -Wl,--gc-sections
+-- Looking for gettimeofday
+-- Looking for gettimeofday - found
+-- Looking for getrusage
+-- Looking for getrusage - found
+-- Looking for GlobalMemoryStatusEx
+-- Looking for GlobalMemoryStatusEx - not found
+-- Looking for strndup
+-- Looking for strndup - found
+-- Looking for strtok_r
+-- Looking for strtok_r - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for backtrace
+-- Looking for backtrace - found
+-- backtrace facility detected in default set of libraries
+-- Found Backtrace: /usr/include
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11")
+Using system zlib
+CMake Deprecation Warning at yaml-cpp/CMakeLists.txt:5 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Performing Test FLAG_WEXTRA
+-- Performing Test FLAG_WEXTRA - Success
+CMake Deprecation Warning at terraphast/CMakeLists.txt:3 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- clang-tidy not found.
+-- Configuring done (1.8s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/chordata/Documents/GitHub/iqtree2/cmake-build-debug

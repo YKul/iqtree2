@@ -718,6 +718,17 @@ model LG4X4 =
 model LG4X = MIX{LG4X1,LG4X2,LG4X3,LG4X4}*R4;
 
 [ ---------------------------------------------------------
+    Codon mixture models (Yuri)
+ --------------------------------------------------------- ]
+model M0 = GY;
+model M1 = MIX{GY{0.001},GY{1.0}};
+model M1a = MIX{GYPURSEL,GY{1.0}};
+model M2 = MIX{GY{0.001},GY{1.0},GY};
+model M2a = MIX{GYPURSEL,GY{1.0},GYPOSSEL};
+model M3 = MIX{GY,GY,GY};
+model M3_test = MIX{GYTESTCAT1,GYTESTCAT2,GYTESTCAT3};
+
+[ ---------------------------------------------------------
     +cF class frequency mixture model of Wang et al. (2008)
  --------------------------------------------------------- ]
 
@@ -1851,8 +1862,20 @@ void ModelMixture::computeTransDerv(double time, double *trans_matrix,
     at(mixture)->computeTransDerv(time, trans_matrix, trans_derv1, trans_derv2);
 }
 
+void ModelMixture::adaptStateFrequency(double* freq)
+{
+    ASSERT(state_freq);
+    for (iterator it = begin(); it != end(); it++) {
+        if ((*it)->freq_type == FREQ_ESTIMATE || (*it)->freq_type == FREQ_EMPIRICAL)
+            (*it)->adaptStateFrequency(freq);
+    }
+}
+
 // added case for gtr optimization -JD
 int ModelMixture::getNDim() {
+    if (fixed_parameters) {
+        return 0;
+    }
     int dim = (fix_prop) ? 0: (size()-1);
     int dim_linked_subst = 0;
     
@@ -2219,6 +2242,8 @@ bool ModelMixture::isMixtureSameQ() {
 double ModelMixture::optimizeParameters(double gradient_epsilon) {
 
     int dim = getNDim();
+    if (dim == 0)
+        return 0.0;
     double score = 0.0;
     IntVector params;
     int i, j, ncategory = size();
@@ -2283,7 +2308,7 @@ double ModelMixture::optimizeParameters(double gradient_epsilon) {
         return score;
     }
 
-	if (!Params::getInstance().optimize_linked_gtr) {
+	// if (!Params::getInstance().optimize_linked_gtr) {
 		// normalize state freq
 		for (i = 0; i < ncategory; i++) {
 			if (at(i)->is_reversible && at(i)->freq_type == FREQ_ESTIMATE) {
@@ -2302,7 +2327,7 @@ double ModelMixture::optimizeParameters(double gradient_epsilon) {
 				cout << endl;
 			}
 		}
-    }
+    // }
     
     // now rescale Q matrices to have proper interpretation of branch lengths
 
@@ -2423,6 +2448,8 @@ void ModelMixture::decomposeRateMatrix() {
 
 // added case for gtr optimization -JD
 void ModelMixture::setVariables(double *variables) {
+    if (getNDim() == 0)
+        return;
 	int dim = 0;
     if (optimizing_gtr) {       
         // only need to get the variable from the first class
@@ -2452,6 +2479,8 @@ void ModelMixture::setVariables(double *variables) {
 
 //added case for gtr optimization -JD
 bool ModelMixture::getVariables(double *variables) {
+    if (getNDim() == 0)
+        return false;
 	int dim = 0;
     bool changed = false;
     if (optimizing_gtr) {
@@ -2497,6 +2526,8 @@ bool ModelMixture::getVariables(double *variables) {
 
 //added case for gtr optimization -JD
 void ModelMixture::setBounds(double *lower_bound, double *upper_bound, bool *bound_check) {
+    if (getNDim() == 0)
+        return;
 	int dim = 0;
     if(optimizing_gtr) {
         // only consider the first class as this is a linked substitution matrix

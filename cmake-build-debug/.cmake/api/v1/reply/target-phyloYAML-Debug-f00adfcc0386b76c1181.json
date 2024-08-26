@@ -1,0 +1,179 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "phylo-yaml/libphyloYAML.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"phylo-yaml/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 121,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 122,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 123,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 722,
+				"parent" : 3
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -std=c++17 -fopenmp -pthread  -O0 -g -fno-inline-functions -fno-inline-functions-called-once -fno-default-inline -fno-inline -fdiagnostics-color=always   -I/usr/include/eigen3 -I/usr/include"
+				},
+				{
+					"fragment" : "-D__SSE3 -msse3"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "IQTREE_TERRAPHAST"
+				},
+				{
+					"define" : "IQ_TREE"
+				},
+				{
+					"define" : "USE_BOOST"
+				},
+				{
+					"define" : "USE_BOOSTER"
+				},
+				{
+					"define" : "USE_LSD2"
+				},
+				{
+					"define" : "_USE_PTHREADS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/yaml-cpp/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/after"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/system"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "/home/chordata/Documents/GitHub/iqtree2/cmake-build-debug"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "yaml-cpp::@087a93a4958cf3ca073e"
+		}
+	],
+	"id" : "phyloYAML::@1d0f37058b85f62f10d4",
+	"name" : "phyloYAML",
+	"nameOnDisk" : "libphyloYAML.a",
+	"paths" : 
+	{
+		"build" : "phylo-yaml",
+		"source" : "phylo-yaml"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "phylo-yaml/statespace.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "phylo-yaml/statespace.cpp",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
